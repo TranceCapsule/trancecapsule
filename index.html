@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trance Capsule — cinematic trance journeys through sound and space. New single 'Hollow Man' out now!">
+  <title>Trance Capsule</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1e1e1e; /* uniform pleasant gray background */
+      color: #ffffff;
+    }
+
+    /* Navigation styling */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1e1e1e; /* same color as background */
+      padding: 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: #00f2ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* Main container for sections */
+    .container {
+      padding-top: 100px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 100px 20px 40px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #00f2ff;
+      text-align: center;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00f2ff;
+      }
+      to {
+        text-shadow: 0 0 30px #00f2ff;
+      }
+    }
+
+    h2 {
+      color: #00f2ff;
+      font-size: 2rem;
+    }
+
+    .button {
+      background: #00f2ff;
+      color: #000;
+      padding: 12px 30px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#music">Music</a>
+    <a href="#follow">Follow</a>
+  </nav>
+
+  <div class="container">
+    <!-- About Section -->
+    <section id="about">
+      <h1>Trance Capsule</h1>
+      <p>A journey through cosmic soundscapes and emotional uplift. Welcome to the new era of cinematic trance.</p>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music">
+      <h2>New Release: Hollow Man</h2>
+      <p>Experience the debut single from Trance Capsule — a deep, emotional and cinematic trance journey. Available now on all streaming platforms.</p>
+      <br />
+      <a href="https://open.spotify.com" target="_blank" class="button">Listen on Spotify</a>
+    </section>
+
+    <!-- Follow Section -->
+    <section id="follow">
+      <h2>Follow Trance Capsule</h2>
+      <p>More music, visual journeys and stories coming soon.</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">&copy; 2025 Trance Capsule. All rights reserved.</div>
+</body>
+</html>
