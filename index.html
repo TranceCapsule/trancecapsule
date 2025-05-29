@@ -7,75 +7,169 @@
   <title>Trance Capsule</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
       color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      overflow-x: hidden;
+      background: #000;
+    }
+    /* Animated star background */
+    #stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: black;
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 3px 3px;
+      animation: moveStars 200s linear infinite;
+    }
+    @keyframes moveStars {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 10000px 10000px;
+      }
     }
     header {
-      width: 100%;
-      padding: 60px 20px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      background: url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a') center/cover no-repeat;
-      background-size: cover;
-      color: #fff;
+      padding: 20px;
     }
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 20px #00f2ff;
+      font-size: 4rem;
+      color: #00f2ff;
+      text-shadow: 0 0 25px #00f2ff;
+      animation: glow 2s ease-in-out infinite alternate;
     }
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      text-shadow: 0 0 10px #00f2ff;
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f2ff; }
+      to { text-shadow: 0 0 40px #00f2ff; }
     }
-    .section {
-      max-width: 800px;
-      padding: 40px 20px;
-      text-align: center;
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
     }
-    .highlight {
+    nav h2 {
+      color: #00f2ff;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
       color: #00f2ff;
     }
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00f2ff;
+    }
+    section p {
+      max-width: 700px;
+      font-size: 1.2rem;
+    }
     .button {
+      margin-top: 20px;
       background: #00f2ff;
       color: #000;
       padding: 12px 30px;
       border: none;
       font-size: 1rem;
-      border-radius: 5px;
+      border-radius: 30px;
       cursor: pointer;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
     }
-    .footer {
-      padding: 20px;
+    .button:hover {
+      background: #00cde5;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: #666;
       font-size: 0.9rem;
-      color: #888;
     }
   </style>
 </head>
 <body>
+  <!-- Star background layer -->
+  <div id="stars"></div>
+
+  <!-- Top navigation menu -->
+  <nav>
+    <h2>Trance Capsule</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#follow">Follow</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero section with glowing title -->
   <header>
     <h1>Trance Capsule</h1>
-    <p>A journey through cosmic soundscapes and emotional uplift. Welcome to the new era of cinematic trance.</p>
+    <p>A journey through cosmic soundscapes and emotional uplift.</p>
   </header>
-  <section class="section">
-    <h2>New Release: <span class="highlight">Hollow Man</span></h2>
-    <p>Experience the debut single from Trance Capsule — a deep, emotional and cinematic trance journey. Available now on all streaming platforms.</p>
-    <br />
+
+  <!-- About section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Trance Capsule is a futuristic sonic experience merging cinematic trance with emotional storytelling. Designed for listeners seeking escape and elevation through music.</p>
+  </section>
+
+  <!-- Music release highlight section -->
+  <section id="music">
+    <h2>New Release: Hollow Man</h2>
+    <p>Listen to the debut single — a dark, powerful trance journey evoking mystery and introspection. Now streaming everywhere.</p>
     <a href="https://open.spotify.com" target="_blank" class="button">Listen on Spotify</a>
   </section>
-  <section class="section">
-    <h2>Follow Trance Capsule</h2>
-    <p>More music, visual journeys and stories coming soon.</p>
+
+  <!-- Follow section -->
+  <section id="follow">
+    <h2>Stay Connected</h2>
+    <p>Follow Trance Capsule on social platforms for the latest music, visuals and creative stories from the universe of cinematic trance.</p>
   </section>
-  <div class="footer">&copy; 2025 Trance Capsule. All rights reserved.</div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Trance Capsule. All rights reserved.
+  </footer>
 </body>
 </html>
